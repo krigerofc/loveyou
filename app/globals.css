@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f3ead6;
+  --paper-light: #faf4e6;
+  --ink: #3a3026;
+  --sepia: #8a6a45;
+  --rose: #b56a5b;
+  --gold: #c4a86b;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-body), Georgia, serif;
+  /* "mesa" escura e quente ao redor do diário no desktop */
+  background-color: #20160f;
+  background-image: radial-gradient(
+    130% 110% at 50% 0%,
+    #3a281c 0%,
+    #251a12 55%,
+    #180f09 100%
+  );
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(181, 106, 91, 0.28);
+  color: var(--ink);
+}
+
+/* ---------- Superfície de papel envelhecido ---------- */
+.paper-bg {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(150% 120% at 50% -10%, rgba(255, 251, 238, 0.85), rgba(243, 234, 214, 0) 55%),
+    radial-gradient(120% 90% at 100% 100%, rgba(138, 106, 69, 0.2), rgba(243, 234, 214, 0) 60%),
+    radial-gradient(90% 80% at 0% 100%, rgba(138, 106, 69, 0.16), rgba(243, 234, 214, 0) 55%);
+}
+
+/* Capa de couro */
+.leather-bg {
+  background-color: var(--leather, #5c3d2e);
+  background-image:
+    radial-gradient(120% 100% at 50% 0%, #6d4b38 0%, #4d3325 60%, #3a2619 100%);
+}
+
+/* Grão de papel (ruído via SVG inline, sem requisições externas) */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.42;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* Pauta de caderno + linha de margem (uma só camada, vários backgrounds) */
+.diary-lines {
+  background-image:
+    linear-gradient(
+      to right,
+      transparent 30px,
+      rgba(181, 106, 91, 0.28) 30px,
+      rgba(181, 106, 91, 0.28) 31px,
+      transparent 31px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 33px,
+      rgba(138, 106, 69, 0.1) 33px,
+      rgba(138, 106, 69, 0.1) 34px
+    );
+  background-position: 0 0, 0 18px;
+}
+
+/* ---------- Fita washi sobre as polaroides ---------- */
+.washi-tape {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  width: 92px;
+  height: 27px;
+  transform: translateX(-50%) rotate(-4deg);
+  background-color: rgba(196, 168, 107, 0.4);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.28) 0,
+    rgba(255, 255, 255, 0.28) 6px,
+    rgba(255, 255, 255, 0) 6px,
+    rgba(255, 255, 255, 0) 12px
+  );
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border-left: 1px dashed rgba(255, 255, 255, 0.4);
+  border-right: 1px dashed rgba(255, 255, 255, 0.4);
+}
+
+/* Filtro vintage suave nas fotos */
+.vintage-photo {
+  filter: sepia(0.18) contrast(1.02) brightness(1.02) saturate(0.95);
+}
+
+/* Capitular (drop cap) no primeiro parágrafo */
+.drop-cap p:first-of-type::first-letter {
+  font-family: var(--font-display), Georgia, serif;
+  float: left;
+  font-size: 3.1rem;
+  line-height: 0.78;
+  padding: 0.08em 0.1em 0 0;
+  color: var(--rose);
+  font-weight: 600;
+}
+
+/* Esconde a scrollbar mantendo a rolagem */
+.fancy-scroll {
+  scrollbar-width: none;
+}
+.fancy-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* ---------- Acessibilidade: respeita movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

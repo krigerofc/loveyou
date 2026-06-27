@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Diário de Nós",
+    "owner": "Tay",
+    "hint": "deslize para virar as páginas"
+  },
+  "pages": [
+    {
+      "id": "capa",
+      "type": "cover",
+      "eyebrow": "27 de junho",
+      "title": "Um dia especial",
+      "subtitle": "para você, Tay",
+      "footnote": "as nossas páginas favoritas",
+      "cta": "abrir o diário"
+    },
+    {
+      "id": "inicio",
+      "type": "photo",
+      "kicker": "Página 1",
+      "title": "O Início",
+      "body": "Tem encontros que a vida inteira parece ter ensaiado em segredo. O nosso foi assim — discreto no começo, e enorme quando eu menos esperava.\n\nEu não sabia, mas naquele dia comum começava a parte mais bonita da minha história. A sua risada ficou, e nunca mais foi embora.",
+      "photo": {
+        "src": "/images/foto-1.svg",
+        "alt": "Nossa primeira foto juntos",
+        "caption": "onde tudo começou",
+        "rotate": "-rotate-2"
+      }
+    },
+    {
+      "id": "caminhada",
+      "type": "text",
+      "kicker": "Página 2",
+      "title": "Caminhada Juntos",
+      "body": "Depois vieram os dias de aprender um ao outro. As manias, os silêncios, o jeito de fazer café, a forma de pedir colo sem dizer nada.\n\nA gente caminhou por ruas, por brigas bobas, por madrugadas de conversa. E em cada passo eu tinha mais certeza: é com você que eu quero me perder e me encontrar.",
+      "aside": "“o melhor da viagem sempre foi a companhia.”"
+    },
+    {
+      "id": "registro",
+      "type": "photo",
+      "kicker": "Página 3",
+      "title": "O Registro",
+      "body": "Algumas lembranças a gente guarda no peito. Outras a gente cola numa página, pra poder visitar sempre que bater a saudade.\n\nEsta é uma delas. Olha a gente ali — inteiros, bobos, felizes. Se um dia eu esquecer como é ser feliz, é só voltar aqui.",
+      "photo": {
+        "src": "/images/foto-2.svg",
+        "alt": "Um momento nosso pra guardar",
+        "caption": "pra guardar pra sempre",
+        "rotate": "rotate-2"
+      }
+    },
+    {
+      "id": "futuro",
+      "type": "finale",
+      "kicker": "Contracapa",
+      "title": "Feliz Aniversário",
+      "body": "Hoje o mundo comemora o melhor que aconteceu comigo. Que sorte a minha dividir os dias com você.\n\nQue venham outros mil capítulos — e que em todos eles eu ainda seja a pessoa que escolhe você.",
+      "signature": "com todo o meu amor,",
+      "signName": "sempre, eu.",
+      "restart": "reler o diário"
+    }
+  ]
+}
