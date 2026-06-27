@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ecd8b0"/>
+      <stop offset="1" stop-color="#d0b882"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g5)"/>
+  <rect x="26" y="26" width="548" height="548" fill="none" stroke="#8a6a45" stroke-width="2" stroke-dasharray="10 10" opacity="0.5"/>
+  <path d="M300 250 C 288 226, 240 220, 222 252 C 204 284, 224 332, 300 392 C 376 332, 396 284, 378 252 C 360 220, 312 226, 300 250 Z" fill="none" stroke="#b56a5b" stroke-width="6" opacity="0.65"/>
+  <text x="300" y="452" font-family="Georgia, serif" font-size="30" fill="#7d6038" text-anchor="middle">Foto 5</text>
+  <text x="300" y="490" font-family="Georgia, serif" font-size="20" fill="#9a7c52" text-anchor="middle">adicione a sua aqui</text>
+</svg>

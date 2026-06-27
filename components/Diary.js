@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import DiaryCover from './DiaryCover';
 import DiaryPage from './DiaryPage';
+import DiaryGallery from './DiaryGallery';
 import Navigation from './Navigation';
 import FloatingHearts from './FloatingHearts';
 
@@ -105,6 +106,8 @@ export default function Diary({ data }) {
           >
             {page.type === 'cover' ? (
               <DiaryCover page={page} onOpen={next} hint={hint} />
+            ) : page.type === 'gallery' ? (
+              <DiaryGallery page={page} />
             ) : (
               <DiaryPage page={page} onRestart={() => goTo(0)} />
             )}

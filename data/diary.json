@@ -49,6 +49,44 @@
       }
     },
     {
+      "id": "galeria",
+      "type": "gallery",
+      "kicker": "Página 4",
+      "title": "Memórias",
+      "entries": [
+        {
+          "photo": {
+            "src": "/images/foto-3.svg",
+            "alt": "Primeiro momento",
+            "caption": "do começo",
+            "rotate": "-rotate-1"
+          },
+          "message": "cada foto dessas guarda um sorriso que eu não consigo descrever.",
+          "date": ""
+        },
+        {
+          "photo": {
+            "src": "/images/foto-4.svg",
+            "alt": "Nosso momento favorito",
+            "caption": "o favorito",
+            "rotate": "rotate-2"
+          },
+          "message": "tem dias que eu olho pra você e não acredito que você é meu.",
+          "date": ""
+        },
+        {
+          "photo": {
+            "src": "/images/foto-5.svg",
+            "alt": "Para sempre guardado",
+            "caption": "pra sempre",
+            "rotate": "-rotate-2"
+          },
+          "message": "se eu pudesse guardar um dia inteiro, seria um desses.",
+          "date": ""
+        }
+      ]
+    },
+    {
       "id": "futuro",
       "type": "finale",
       "kicker": "Contracapa",
