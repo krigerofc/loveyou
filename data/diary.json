@@ -87,6 +87,14 @@
       ]
     },
     {
+      "id": "gratidao",
+      "type": "text",
+      "kicker": "Página 5",
+      "title": "Obrigado",
+      "body": "Obrigado por cada vez que você ficou. Por cada abraço que chegou na hora certa. Por cada vez que você me escolheu mesmo nos dias mais difíceis.\n\nVocê me ensinou que amor de verdade é simples — é estar, é ouvir, é segurar a mão sem precisar de motivo. E eu aprendo isso com você todo dia.",
+      "aside": ""obrigado por existir do jeito que você é.""
+    },
+    {
       "id": "futuro",
       "type": "finale",
       "kicker": "Contracapa",
