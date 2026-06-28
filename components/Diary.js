@@ -181,7 +181,7 @@ export default function Diary({ data }) {
             style={{ transformStyle: 'preserve-3d', backfaceVisibility: 'hidden' }}
           >
             {page.type === 'cover' ? (
-              <DiaryCover page={page} onOpen={next} />
+              <DiaryCover page={page} onOpen={next} hint={hint} />
             ) : page.type === 'gallery' ? (
               <DiaryGallery page={page} />
             ) : (
