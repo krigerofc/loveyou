@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Polaroid from './Polaroid';
 import InkHeart from './InkHeart';
 import PetalRain from './PetalRain';
@@ -43,6 +44,26 @@ function Paragraphs({ text }) {
  */
 export default function DiaryPage({ page, onRestart, isFirstContentPage = false, swipeHint = '' }) {
   const isFinale = page.type === 'finale';
+  const scrollRef = useRef(null);
+  const [hasMore, setHasMore] = useState(false);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    function check() {
+      setHasMore(el.scrollTop + el.clientHeight < el.scrollHeight - 8);
+    }
+
+    check();
+    el.addEventListener('scroll', check, { passive: true });
+    const ro = new ResizeObserver(check);
+    ro.observe(el);
+    return () => {
+      el.removeEventListener('scroll', check);
+      ro.disconnect();
+    };
+  }, []);
 
   return (
     <div className="relative h-full w-full overflow-hidden">
@@ -52,6 +73,7 @@ export default function DiaryPage({ page, onRestart, isFirstContentPage = false,
       {isFinale ? <PetalRain count={24} /> : null}
 
       <motion.div
+        ref={scrollRef}
         variants={reveal}
         initial="hidden"
         animate="show"
@@ -135,6 +157,27 @@ export default function DiaryPage({ page, onRestart, isFirstContentPage = false,
           </motion.div>
         ) : null}
       </motion.div>
+
+      <AnimatePresence>
+        {hasMore && (
+          <motion.div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-16 inset-x-0 z-20 flex flex-col items-center"
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.span
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-sepia/30 bg-paper/90 font-ui text-base text-sepia/70 shadow-sm select-none backdrop-blur-sm"
+              animate={{ y: [0, 5, 0] }}
+              transition={{ duration: 1.1, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              ↓
+            </motion.span>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {isFinale ? <EasterEggHint /> : null}
       {swipeHint ? <SwipeHint text={swipeHint} /> : null}

@@ -12,7 +12,7 @@
       "title": "Um dia especial",
       "subtitle": "para você, Tay",
       "footnote": "as nossas páginas favoritas",
-      "initials": "V & T",
+      "initials": "K & T",
       "cta": "abrir o diário"
     },
     {
@@ -20,35 +20,35 @@
       "type": "photo",
       "kicker": "Página 1",
       "title": "O Início",
-      "body": "Tem encontros que a vida inteira parece ter ensaiado em segredo. O nosso foi assim — discreto no começo, e enorme quando eu menos esperava.\n\nEu não sabia, mas naquele dia comum começava a parte mais bonita da minha história. A sua risada ficou, e nunca mais foi embora.",
+      "body": "Era engraçado como eu e você se \"odiava\". Mas a verdade é que, por trás de toda aquela implicância, a gente estava se apaixonando. Aos poucos fomos nos abrindo e virando madrugadas juntos em chamada de vídeo, jogando, brincando e conversando.\n\nA gente morava longe, mas a distância nunca importou. Nosso amor só ficava mais forte, era inocente, real e sincero. Nunca vi duas pessoas se gostarem tanto. Foi maravilhoso e parecia um sonho.",
       "photo": {
         "src": "/images/foto-1.jpg",
         "alt": "Tatynhaaa e maria joaninha — onde tudo começou",
         "caption": "onde tudo começou",
         "rotate": "-rotate-2",
-        "back": "no dia em que a gente se viu pela primeira vez, eu não sabia que estava começando a melhor parte"
+        "back": "Cada momento é único e inesquecível, porque você estava lá."
       }
     },
     {
       "id": "caminhada",
       "type": "text",
       "kicker": "Página 2",
-      "title": "Caminhada Juntos",
-      "body": "Depois vieram os dias de aprender um ao outro. As manias, os silêncios, o jeito de fazer café, a forma de pedir colo sem dizer nada.\n\nA gente caminhou por ruas, por brigas bobas, por madrugadas de conversa. E em cada passo eu tinha mais certeza: é com você que eu quero me perder e me encontrar.",
-      "aside": "“o melhor da viagem sempre foi a companhia.”"
+      "title": "O caminho",
+      "body": "Foram momentos incríveis com você, que me fizeram enxergar a vida por novos ângulos e me trouxeram sentimentos que eu nunca tinha experimentado antes. Cada ligação, conversa e dia juntos me faziam apaixonar mais e mais por você. Nosso relacionamento foi cheio de momentos assim, daqueles em que a gente dava risada por bobeira e fazia um dia comum virar o melhor dia da semana. Até as nossas brigas tinham uma certa beleza, porque no fundo a gente só queria o bem um do outro. Tivemos muito mais coisas boas do que ruins, e eu posso afirmar com certeza: a gente era um casal muito foda, porque fazia do nosso mundo algo só nosso.\n\nEu aprendi a compartilhar minhas coisas com alguém e, desde então, te colocava em tudo. Às vezes esperava para fazer algo só para fazer com você. Eu sei que é bobo, só que isso era o nosso mundo... um mundinho onde eu fazia minhas coisinhas e dividia tudo com o meu amor.\n\nTodo relacionamento passa por momentos difíceis. A verdade é que a tempestade sempre vem, e ela sempre é forte. Mas quando duas pessoas se gostam de verdade, elas se ajudam e ficam lado a lado. Se um não segurar a mão do outro, os dois acabam se perdendo no meio do caminho.\n\nPara mim, enfrentar esses dias cinzentos juntos e ver você bem sempre foi o que manteve a nossa parceria de pé. E isso não é só sobre brigas; é sobre tudo. É sobre se ajudar na vida, no trabalho, cuidar da saúde um do outro, ajudar a crescer e planejar um futuro. Eu sempre tentei fazer de tudo para te ajudar a crescer junto comigo, porque eu nunca quis te deixar para trás. Não sou perfeito, e nós dois somos complicados de vez em quando, mas eu sempre me apaixonei por esse seu jeitinho irritadinha e nunca deixei a tempestade falar mais alto.",
+      "aside": "“O tempo é tudo que não temos, o destino é o que escolhemos.”"
     },
     {
       "id": "registro",
       "type": "photo",
       "kicker": "Página 3",
-      "title": "O Registro",
-      "body": "Algumas lembranças a gente guarda no peito. Outras a gente cola numa página, pra poder visitar sempre que bater a saudade.\n\nEsta é uma delas. Olha a gente ali — inteiros, bobos, felizes. Se um dia eu esquecer como é ser feliz, é só voltar aqui.",
+      "title": "Momentos eternos",
+      "body": "Algumas lembranças a gente guarda para sempre. Escolhi essa foto porque me senti feliz demais quando a gente tirou. Ela me lembra a primeira vez que eu te vi pessoalmente. Eu estava tão feliz que não desgrudava de você!\n\nAcho maravilhoso como a gente se entende perfeitamente quando estamos juntos. Tudo fica tão divertido ainda mais com beijinhos. Amo seu olhar e sorriso, por isso essa foto é perfeita!",
       "photo": {
         "src": "/images/foto-2.jpg",
         "alt": "Um momento nosso pra guardar",
         "caption": "pra guardar pra sempre",
         "rotate": "rotate-2",
-        "back": "esse sorriso aqui mora dentro de mim — em qualquer dia difícil, eu fecho os olhos e te vejo assim"
+        "back": "seu sorriso aqui mora dentro de mim em qualquer dia difícil, eu fecho os olhos e te vejo assim"
       }
     },
     {
@@ -59,36 +59,36 @@
       "entries": [
         {
           "photo": {
-            "src": "/images/foto-3.svg",
+            "src": "/images/foto-3.jpeg",
             "alt": "Primeiro momento",
             "caption": "do começo",
             "rotate": "-rotate-1",
             "back": "do começo, mas ainda parece o primeiro dia"
           },
-          "message": "cada foto dessas guarda um sorriso que eu não consigo descrever.",
-          "date": ""
+          "message": "Os dias mais felizes é quando você estava lá.",
+          "date": "01/2025"
         },
         {
           "photo": {
-            "src": "/images/foto-4.svg",
+            "src": "/images/foto-4.jpeg",
             "alt": "Nosso momento favorito",
-            "caption": "o favorito",
+            "caption": "A primeira viagem",
             "rotate": "rotate-2",
             "back": "se eu pudesse repetir um dia, repetia esse mil vezes"
           },
-          "message": "tem dias que eu olho pra você e não acredito que você é meu.",
-          "date": ""
+          "message": "se eu pudesse guardar voltar no tempo, voltaria aqui!",
+          "date": "12/2023"
         },
         {
           "photo": {
-            "src": "/images/foto-5.svg",
+            "src": "/images/foto-5.jpeg",
             "alt": "Para sempre guardado",
             "caption": "pra sempre",
             "rotate": "-rotate-2",
             "back": "minha pessoa favorita do mundo, em todas as fotos da minha vida"
           },
-          "message": "se eu pudesse guardar um dia inteiro, seria um desses.",
-          "date": ""
+          "message": "Tem momentos que a gente deseja que nunca acabe",
+          "date": "2023"
         }
       ]
     },
@@ -97,17 +97,17 @@
       "type": "text",
       "kicker": "Página 5",
       "title": "Obrigado",
-      "body": "Obrigado por cada vez que você ficou. Por cada abraço que chegou na hora certa. Por cada vez que você me escolheu mesmo nos dias mais difíceis.\n\nVocê me ensinou que amor de verdade é simples — é estar, é ouvir, é segurar a mão sem precisar de motivo. E eu aprendo isso com você todo dia.",
-      "aside": "“obrigado por existir do jeito que você é.”"
+      "body": "Obrigado por tudo o que vivemos e por cada momento. Reconheço o seu esforço durante esses anos. Sou muito grato por ter te conhecido, guardo um carinho muito grande por você e sempre vou lembrar dos nossos momentos bons. Agradeço por ter me ajudado a me tornar um homem melhor e por me mostrar que realmente quero construir uma família.\n\nEspero que você faça as melhores escolhas para a sua vida. Saiba que vou estar sempre torcendo por você e não só eu, mas toda a minha família também. Obrigado por tudo.",
+      "aside": "“Nós escolhemos o futuro.”"
     },
     {
       "id": "futuro",
       "type": "finale",
       "kicker": "Contracapa",
       "title": "Feliz Aniversário",
-      "body": "Hoje o mundo comemora o melhor que aconteceu comigo. Que sorte a minha dividir os dias com você.\n\nQue venham outros mil capítulos — e que em todos eles eu ainda seja a pessoa que escolhe você.",
-      "signature": "com todo o meu amor,",
-      "signName": "sempre, eu.",
+      "body": "Desejo de coração que você tenha muita saúde, paz e leveza. Que as pessoas certas estejam sempre por perto e que a vida te surpreenda com coisas boas a cada dia.\n\nFeliz aniversário. Que esse novo ano seja cheio de conquistas e momentos que valham a pena guardar.",
+      "signature": "com carinho,",
+      "signName": "Kriger.",
       "restart": "reler o diário"
     }
   ]
