@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion';
 import Polaroid from './Polaroid';
 import InkHeart from './InkHeart';
+import PetalRain from './PetalRain';
+import EasterEggHint from './EasterEggHint';
+import SwipeHint from './SwipeHint';
 
 const reveal = {
   hidden: {},
@@ -34,14 +37,19 @@ function Paragraphs({ text }) {
  * Uma folha do diário. Trata os tipos "text", "photo" e "finale".
  * O fundo de papel e a pauta ficam numa camada fixa; o conteúdo rola
  * por cima caso passe da altura da tela.
+ *
+ * Na contracapa (finale) dispara uma chuva de pétalas e, depois dela,
+ * uma dica sussurrada sobre o easter egg de long-press.
  */
-export default function DiaryPage({ page, onRestart }) {
+export default function DiaryPage({ page, onRestart, isFirstContentPage = false, swipeHint = '' }) {
   const isFinale = page.type === 'finale';
 
   return (
     <div className="relative h-full w-full overflow-hidden">
       <div className="paper-bg grain absolute inset-0" />
       <div className="diary-lines pointer-events-none absolute inset-0 opacity-70" />
+
+      {isFinale ? <PetalRain count={24} /> : null}
 
       <motion.div
         variants={reveal}
@@ -98,6 +106,8 @@ export default function DiaryPage({ page, onRestart }) {
               alt={page.photo.alt}
               caption={page.photo.caption}
               rotate={page.photo.rotate}
+              back={page.photo.back}
+              firstHint={isFirstContentPage}
             />
           </motion.div>
         ) : null}
@@ -125,6 +135,9 @@ export default function DiaryPage({ page, onRestart }) {
           </motion.div>
         ) : null}
       </motion.div>
+
+      {isFinale ? <EasterEggHint /> : null}
+      {swipeHint ? <SwipeHint text={swipeHint} /> : null}
     </div>
   );
 }

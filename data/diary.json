@@ -2,7 +2,7 @@
   "meta": {
     "title": "Diário de Nós",
     "owner": "Tay",
-    "hint": "deslize para virar as páginas"
+    "hint": "deslize ou use as setas para virar"
   },
   "pages": [
     {
@@ -12,6 +12,7 @@
       "title": "Um dia especial",
       "subtitle": "para você, Tay",
       "footnote": "as nossas páginas favoritas",
+      "initials": "V & T",
       "cta": "abrir o diário"
     },
     {
@@ -24,7 +25,8 @@
         "src": "/images/foto-1.svg",
         "alt": "Nossa primeira foto juntos",
         "caption": "onde tudo começou",
-        "rotate": "-rotate-2"
+        "rotate": "-rotate-2",
+        "back": "no dia em que a gente se viu pela primeira vez, eu não sabia que estava começando a melhor parte"
       }
     },
     {
@@ -45,7 +47,8 @@
         "src": "/images/foto-2.svg",
         "alt": "Um momento nosso pra guardar",
         "caption": "pra guardar pra sempre",
-        "rotate": "rotate-2"
+        "rotate": "rotate-2",
+        "back": "esse sorriso aqui mora dentro de mim — em qualquer dia difícil, eu fecho os olhos e te vejo assim"
       }
     },
     {
@@ -59,7 +62,8 @@
             "src": "/images/foto-3.svg",
             "alt": "Primeiro momento",
             "caption": "do começo",
-            "rotate": "-rotate-1"
+            "rotate": "-rotate-1",
+            "back": "do começo, mas ainda parece o primeiro dia"
           },
           "message": "cada foto dessas guarda um sorriso que eu não consigo descrever.",
           "date": ""
@@ -69,7 +73,8 @@
             "src": "/images/foto-4.svg",
             "alt": "Nosso momento favorito",
             "caption": "o favorito",
-            "rotate": "rotate-2"
+            "rotate": "rotate-2",
+            "back": "se eu pudesse repetir um dia, repetia esse mil vezes"
           },
           "message": "tem dias que eu olho pra você e não acredito que você é meu.",
           "date": ""
@@ -79,7 +84,8 @@
             "src": "/images/foto-5.svg",
             "alt": "Para sempre guardado",
             "caption": "pra sempre",
-            "rotate": "-rotate-2"
+            "rotate": "-rotate-2",
+            "back": "minha pessoa favorita do mundo, em todas as fotos da minha vida"
           },
           "message": "se eu pudesse guardar um dia inteiro, seria um desses.",
           "date": ""
@@ -92,7 +98,7 @@
       "kicker": "Página 5",
       "title": "Obrigado",
       "body": "Obrigado por cada vez que você ficou. Por cada abraço que chegou na hora certa. Por cada vez que você me escolheu mesmo nos dias mais difíceis.\n\nVocê me ensinou que amor de verdade é simples — é estar, é ouvir, é segurar a mão sem precisar de motivo. E eu aprendo isso com você todo dia.",
-      "aside": ""obrigado por existir do jeito que você é.""
+      "aside": "“obrigado por existir do jeito que você é.”"
     },
     {
       "id": "futuro",
