@@ -134,6 +134,13 @@ body {
   height: 0;
 }
 
+/* Long-press não deve abrir menu de contexto em mobile */
+.diary-book {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
 /* ---------- Acessibilidade: respeita movimento reduzido ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const STORAGE_KEY = 'diario-hint-seen';
+import { hintSeen, markHintSeen } from '@/lib/hints';
 
 /**
  * Dica de navegação que aparece uma vez (localStorage) sobre a capa.
@@ -13,20 +12,12 @@ export default function SwipeHint({ text }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    try {
-      if (!localStorage.getItem(STORAGE_KEY)) {
-        setVisible(true);
-      }
-    } catch {
-      // localStorage bloqueado (modo privado restrito) — não mostra
-    }
+    if (!hintSeen('swipe')) setVisible(true);
   }, []);
 
   function dismiss() {
     setVisible(false);
-    try {
-      localStorage.setItem(STORAGE_KEY, '1');
-    } catch {}
+    markHintSeen('swipe');
   }
 
   useEffect(() => {
@@ -47,7 +38,7 @@ export default function SwipeHint({ text }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 8 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="absolute bottom-20 inset-x-0 z-40 mx-auto flex w-fit flex-col items-center gap-2 focus:outline-none"
+          className="absolute bottom-24 inset-x-0 z-40 mx-auto flex w-fit flex-col items-center gap-2 focus:outline-none"
         >
           {/* mão deslizando */}
           <motion.span

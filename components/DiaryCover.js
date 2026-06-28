@@ -1,8 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import InkHeart from './InkHeart';
-import SwipeHint from './SwipeHint';
+import WaxSeal from './WaxSeal';
 
 const container = {
   hidden: {},
@@ -21,15 +22,23 @@ const item = {
 };
 
 /**
- * Capa do diário: couro escuro, moldura dourada dupla, título serifado
- * e o coração de tinta que se desenha. Botão para "abrir" leva à página 1.
+ * Capa do diário: couro escuro, moldura dourada dupla, título serifado,
+ * coração de tinta no topo e selo de cera com as iniciais como CTA.
+ * Tocar no selo "racha" a cera e abre o diário.
  */
-export default function DiaryCover({ page, onOpen, hint }) {
+export default function DiaryCover({ page, onOpen }) {
+  const [cracked, setCracked] = useState(false);
+
+  function crack() {
+    if (cracked) return;
+    setCracked(true);
+    // espera a animação de quebra terminar antes de virar a página
+    setTimeout(() => onOpen?.(), 580);
+  }
+
   return (
     <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
       <div className="leather-bg grain absolute inset-0" />
-
-      {hint && <SwipeHint text={hint} />}
 
       {/* moldura dourada dupla */}
       <div className="pointer-events-none absolute inset-4 rounded-[10px] border border-gold/40" />
@@ -48,8 +57,8 @@ export default function DiaryCover({ page, onOpen, hint }) {
           {page.eyebrow}
         </motion.p>
 
-        <motion.div variants={item} className="my-5 text-gold">
-          <InkHeart size={46} draw delay={0.5} />
+        <motion.div variants={item} className="my-4 text-gold">
+          <InkHeart size={40} draw delay={0.5} />
         </motion.div>
 
         <motion.h1
@@ -68,7 +77,7 @@ export default function DiaryCover({ page, onOpen, hint }) {
 
         <motion.span
           variants={item}
-          className="my-6 block h-px w-20 bg-gold/40"
+          className="my-5 block h-px w-20 bg-gold/40"
         />
 
         <motion.p
@@ -78,14 +87,21 @@ export default function DiaryCover({ page, onOpen, hint }) {
           {page.footnote}
         </motion.p>
 
-        <motion.button
+        <motion.div variants={item} className="mt-6">
+          <WaxSeal
+            initials={page.initials ?? 'V&T'}
+            cracked={cracked}
+            onCrack={crack}
+            label={page.cta || 'Abrir o diário'}
+          />
+        </motion.div>
+
+        <motion.p
           variants={item}
-          type="button"
-          onClick={onOpen}
-          className="mt-10 rounded-full border border-gold/60 px-7 py-2.5 font-ui text-xs uppercase tracking-[0.22em] text-gold transition-colors hover:bg-gold/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/70"
+          className="mt-3 font-hand text-base text-paper/70"
         >
-          {page.cta} →
-        </motion.button>
+          toque no selo
+        </motion.p>
       </motion.div>
     </div>
   );
